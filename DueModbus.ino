@@ -11,14 +11,11 @@
 This example code shows a quick and dirty way to get an
 arduino to talk to a modbus master device with a
 device ID of 1 at 9600 baud.
-
-It requires a modified set of flash and modbus libraries
-to handle issues unique to the Due.
 */
 
-//Setup the brewtrollers register bank
 //All of the data accumulated will be stored here
 modbusDevice regBank(4096);
+
 //Create the modbus slave protocol handler
 modbusSlave slave;
 
@@ -61,8 +58,7 @@ void loop()
 {
  
  while(1)
-  {
- 
+  { 
      slave.run();  
   }
 }
